@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GeoJSON</title>
+   <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+   <!-- <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script> -->
+   <!-- The lines below are only needed for old environments like Internet Explorer and Android 4.x -->
+   <!-- <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,TextDecoder"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.18.3/minified.js"></script> -->
+  <!-- <link href="./ol.css" rel="stylesheet" />
+<script src="./ol.js"></script>
+   -->
+   <!-- <script type="text/javascript" src="data.json"></script> -->
+  <link rel="stylesheet" href="style.css" /> <!-- the css file link -->
+  <script type="module" src="Map.js"></script>
+
+  <script type="module"  src="Trackers.js"></script>
+  <script type="module" src="Point.js"></script>
+  <!-- <script lang="ts" >
+    import meta from 'data.json';
+
+    const filePromise = import(/* @vite-ignore */ `./${meta.file}.json`);
+</script> -->
+
+  
+</head>
+<!-- <body onload="init()"> -->
+
+<body>
+  <div id="backGround"> 
+  <input type="file" id="file">
+  <button type="button" id="cleanMap" class="buttons">Clean Map!</button>
+  <button type="button" id="writeToExel" class="buttons">Save Map!</button>
+
+ 
+    <div id=tableDisplay class="tablePlace"></div>
+    <div id="map" class="map"></div>
+    <div id="height-file"></div>
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+      <div id="popup-icon"></div>
+    </div>
+  </div>
+</body>
+
+</html>
